@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * memonent, a calm place for your memos. Warm off-white paper in light mode, a soft
+ * dark slate at night, generous whitespace, and one restrained sage accent.
+ */
+
+:root {
+  color-scheme: light;
+}
+:root.dark {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  background-color: #f7f8f5;
+  color: #24291f;
+}
+:root.dark body {
+  background-color: #13160f;
+  color: #e7ebe1;
+}
+
+/* Thin, unobtrusive scrollbars. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cfd8c8 transparent;
+}
+:root.dark * {
+  scrollbar-color: #36402f transparent;
+}
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #cfd8c8;
+  border-radius: 5px;
+}
+:root.dark *::-webkit-scrollbar-thumb {
+  background: #36402f;
+}
+
+@keyframes mn-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes mn-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.mn-fade {
+  animation: mn-fade 0.16s ease-out;
+}
+.mn-rise {
+  animation: mn-rise 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
