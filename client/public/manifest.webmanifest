@@ -1,0 +1,17 @@
+{
+  "name": "memonent",
+  "short_name": "memonent",
+  "description": "Smart, minimalist storage for your notes and memos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f6f3",
+  "theme_color": "#f4f6f3",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
